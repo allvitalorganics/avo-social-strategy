@@ -23,8 +23,8 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.65;
     color: var(--ink);
     background: var(--paper);
     -webkit-font-smoothing: antialiased;
@@ -70,7 +70,7 @@
   }
   nav.top .links a:hover { color: var(--ink); }
   main {
-    max-width: 1000px;
+    max-width: 760px;
     margin: 0 auto;
     padding: 56px 32px 120px;
   }
@@ -88,9 +88,9 @@
     text-transform: uppercase;
   }
   header.title-block h1 {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
-    line-height: 1.1;
+    line-height: 1.15;
     letter-spacing: -0.02em;
     margin-bottom: 8px;
     color: var(--ink);
@@ -99,15 +99,13 @@
     font-size: 17px;
     font-weight: 400;
     color: var(--mute);
-    margin-bottom: 22px;
-    letter-spacing: 0;
+    margin-bottom: 24px;
   }
   header.title-block .lede {
     font-size: 17px;
     color: var(--ink-soft);
-    max-width: 720px;
-    margin-bottom: 28px;
-    line-height: 1.5;
+    margin-bottom: 14px;
+    line-height: 1.6;
   }
   header.title-block .meta {
     display: flex;
@@ -116,13 +114,14 @@
     color: var(--mute);
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 24px;
   }
   header.title-block .meta span:not(:last-child)::after {
     content: "·";
     margin: 0 12px;
     color: var(--line);
   }
-  section { margin-bottom: 72px; }
+  section { margin-bottom: 64px; }
   section .section-eyebrow {
     font-size: 11px;
     font-weight: 600;
@@ -134,42 +133,34 @@
   }
   section .section-eyebrow .ko { color: var(--mute); font-weight: 500; }
   h2 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.015em;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
     margin-bottom: 20px;
     color: var(--ink);
   }
   h3 {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-    margin-top: 40px;
-    margin-bottom: 14px;
+    line-height: 1.4;
+    margin-top: 32px;
+    margin-bottom: 8px;
     color: var(--ink);
   }
   h4 {
     font-size: 15px;
     font-weight: 600;
-    margin-top: 24px;
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 6px;
     color: var(--ink);
   }
-  p { margin-bottom: 14px; max-width: 760px; }
-  p.intro {
-    font-size: 17px;
-    color: var(--ink-soft);
-    line-height: 1.5;
-    margin-bottom: 24px;
-    max-width: 760px;
-  }
-  ul, ol { margin: 0 0 18px 22px; }
-  li { margin-bottom: 6px; max-width: 760px; }
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+  ul, ol { margin: 0 0 16px 22px; }
+  li { margin-bottom: 6px; }
   ul ul, ol ol { margin-top: 6px; }
   strong { color: var(--ink); font-weight: 600; }
-  em.ko { font-style: normal; color: var(--mute); font-weight: 400; }
   a {
     color: var(--accent-soft);
     text-decoration: none;
@@ -184,23 +175,16 @@
     padding: 18px 22px;
     border-radius: 0 8px 8px 0;
     margin: 22px 0;
-    max-width: 800px;
   }
-  .callout .label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    margin-bottom: 6px;
-    display: block;
-    text-transform: uppercase;
-  }
-  .callout p { margin-bottom: 0; font-size: 14px; }
+  .callout p { font-size: 15px; }
   .callout .ko-line {
     display: block;
     font-size: 13px;
     color: var(--mute);
-    margin-top: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    line-height: 1.6;
   }
 
   .callout-strong {
@@ -209,7 +193,6 @@
     padding: 24px 28px;
     border-radius: 10px;
     margin: 28px 0;
-    max-width: 800px;
     box-shadow: var(--shadow);
   }
   .callout-strong .label {
@@ -233,112 +216,15 @@
     font-size: 15px;
     color: var(--ink-soft);
     margin-bottom: 12px;
+    line-height: 1.6;
   }
-  .callout-strong p:last-child { margin-bottom: 0; }
   .callout-strong .ko-block {
     margin-top: 16px;
     padding-top: 16px;
     border-top: 1px solid var(--line-soft);
     font-size: 13px;
     color: var(--mute);
-    line-height: 1.6;
-  }
-
-  .question-card {
-    background: var(--white);
-    border: 1px solid var(--line-soft);
-    border-radius: 10px;
-    padding: 24px 28px;
-    margin-bottom: 16px;
-    box-shadow: var(--shadow);
-    transition: box-shadow 0.15s ease;
-  }
-  .question-card:hover { box-shadow: var(--shadow-hover); }
-  .question-card .q-num {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 6px;
-    display: block;
-    text-transform: uppercase;
-  }
-  .question-card h3 {
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 6px;
-    line-height: 1.35;
-  }
-  .question-card .q-ko {
-    font-size: 13px;
-    color: var(--mute);
-    margin-bottom: 12px;
-  }
-  .question-card .sub {
-    font-size: 13px;
-    color: var(--mute);
-    margin-bottom: 12px;
-  }
-  .question-card ul { margin-bottom: 0; margin-left: 20px; }
-  .question-card li {
-    font-size: 14px;
-    color: var(--ink-soft);
-    margin-bottom: 4px;
-  }
-
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin: 24px 0;
-  }
-  .grid-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 14px;
-    margin: 24px 0;
-  }
-  @media (max-width: 720px) {
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
-    h1 { font-size: 32px !important; }
-    h2 { font-size: 24px; }
-    main { padding: 32px 20px 80px; }
-    nav.top .nav-inner { padding: 0 20px; flex-direction: column; align-items: flex-start; gap: 8px; }
-    nav.top .links { gap: 10px; }
-  }
-
-  .mini-card {
-    background: var(--white);
-    border: 1px solid var(--line-soft);
-    border-radius: 10px;
-    padding: 18px 20px;
-  }
-  .mini-card h4 { margin-top: 0; margin-bottom: 6px; font-size: 15px; }
-  .mini-card .meta {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 8px;
-    display: block;
-    text-transform: uppercase;
-  }
-  .mini-card p {
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-  .mini-card p:last-child { margin-bottom: 0; }
-  .mini-card .study {
-    font-size: 12px;
-    color: var(--mute);
-    margin-top: 6px;
-  }
-  .mini-card .ko-note {
-    font-size: 12px;
-    color: var(--mute);
-    margin-top: 6px;
+    line-height: 1.7;
   }
 
   table {
@@ -350,11 +236,11 @@
     overflow: hidden;
     border: 1px solid var(--line-soft);
     box-shadow: var(--shadow);
+    font-size: 14px;
   }
   th, td {
     padding: 12px 16px;
     text-align: left;
-    font-size: 14px;
     border-bottom: 1px solid var(--line-soft);
     vertical-align: top;
   }
@@ -374,34 +260,42 @@
     margin: 56px 0;
   }
 
-  .timeline {
-    border-left: 1px solid var(--line);
-    padding-left: 24px;
-    margin: 24px 0;
+  .ref {
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--line-soft);
   }
-  .timeline-item { margin-bottom: 24px; position: relative; }
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -29px;
-    top: 4px;
-    width: 9px;
-    height: 9px;
-    background: var(--accent);
-    border-radius: 50%;
-    border: 2px solid var(--paper);
+  .ref:last-child { border-bottom: none; }
+  .ref .ref-head {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
   }
-  .timeline-item .week {
-    font-size: 11px;
+  .ref .handle { font-weight: 600; font-size: 16px; color: var(--ink); }
+  .ref .handle a { color: var(--ink); border-bottom: none; }
+  .ref .handle a:hover { color: var(--accent); }
+  .ref .category { font-size: 12px; color: var(--mute); }
+  .ref p { font-size: 15px; margin-bottom: 8px; }
+  .ref p:last-child { margin-bottom: 0; }
+
+  .timeline-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .timeline-row:last-child { border-bottom: none; }
+  .timeline-row .week {
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.06em;
     color: var(--accent);
-    margin-bottom: 4px;
-    display: block;
-    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
-  .timeline-item h4 { margin-top: 0; margin-bottom: 6px; }
-  .timeline-item p { font-size: 14px; color: var(--ink-soft); }
+  .timeline-row h4 { margin: 0 0 6px; font-size: 15px; }
+  .timeline-row p { font-size: 14px; color: var(--ink-soft); margin: 0; }
 
   footer.doc-footer {
     margin-top: 80px;
@@ -412,58 +306,24 @@
   }
   footer.doc-footer p { margin: 0 0 4px; }
 
-  .ref-account {
-    background: var(--white);
-    border: 1px solid var(--line-soft);
+  .post-link {
+    background: var(--cream);
     border-radius: 10px;
     padding: 18px 22px;
-    margin-bottom: 12px;
-    transition: box-shadow 0.15s ease;
+    margin: 18px 0;
+    font-size: 14px;
   }
-  .ref-account:hover { box-shadow: var(--shadow); }
-  .ref-account .ref-meta {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 6px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .ref-account .handle { font-weight: 600; font-size: 15px; color: var(--ink); }
-  .ref-account .handle a { color: var(--ink); border-bottom: none; }
-  .ref-account .handle a:hover { color: var(--accent); }
-  .ref-account .category {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    padding: 3px 8px;
-    background: var(--cream);
-    border-radius: 6px;
-    text-transform: uppercase;
-  }
-  .ref-account .why { font-size: 13px; color: var(--ink-soft); margin-bottom: 4px; line-height: 1.5; }
-  .ref-account .extract { font-size: 12px; color: var(--mute); margin-top: 6px; }
-  .ref-account .ko-note { font-size: 12px; color: var(--mute); margin-top: 4px; }
-  .ref-account.alex-pick { border-left: 2px solid var(--accent); }
+  .post-link strong { color: var(--ink); }
+  .post-link a { font-size: 13px; word-break: break-all; }
 
-  .post-callout {
-    background: var(--cream);
-    border-radius: 10px;
-    padding: 20px 24px;
-    margin-bottom: 12px;
+  @media (max-width: 720px) {
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 21px; }
+    main { padding: 32px 20px 80px; }
+    nav.top .nav-inner { padding: 0 20px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    nav.top .links { gap: 10px; }
+    .timeline-row { grid-template-columns: 1fr; gap: 4px; }
   }
-  .post-callout .post-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    margin-bottom: 6px;
-    display: block;
-    text-transform: uppercase;
-  }
-  .post-callout a { font-size: 12px; word-break: break-all; }
-  .post-callout p { font-size: 13px; margin-bottom: 6px; }
-  .post-callout p:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -494,12 +354,13 @@
   <div class="eyebrow">Research Brief · Final Month</div>
   <h1>AVO Social Automation · Research Strategy</h1>
   <div class="ko-subtitle">올바이탈오가닉스 소셜 자동화 · 리서치 전략</div>
-  <p class="lede">A research-led brief for the design and pipeline work to be completed in Theo's final contract month. Strategy is built from evidence, not from instinct.</p>
+  <p class="lede">This document is the brief for the first week of your final contract month. Before any template, pipeline, or scheduler work begins, we need to understand the landscape we're entering. The work that follows is built on what you find here.</p>
+  <p class="lede">The principle is simple: we'd rather build the right system slowly than the wrong system quickly.</p>
   <div class="meta">
-    <span>For 이태근 · Theo</span>
+    <span>For Theo · 이태근</span>
     <span>From Alex Kim · 김승준</span>
     <span>April 27, 2026</span>
-    <span>Phase: Week 1 of 4</span>
+    <span>Phase 1 of 4</span>
   </div>
 </header>
 
@@ -508,15 +369,14 @@
   <span class="section-eyebrow">01 · Mandate <span class="ko">임무</span></span>
   <h2>Mandate</h2>
 
-  <p class="intro">A content system built on assumed categories will produce assumed engagement. We are not in this for short-term posting volume. We are building the long-term founder authority that will carry every brand AVO launches.</p>
+  <p>The instinct will be to skip research and start designing templates. I'm asking you not to. Templates are the easy part. The strategy underneath them is what determines whether the work compounds or not. If we pick the wrong pillars now, the templates will render the wrong thing forever, and the year of posting that follows will all sit on a foundation that doesn't hold.</p>
 
-  <p>The temptation is to skip research and start designing templates. Don't. The templates are easy. The strategy underneath them is the entire game. If we pick the wrong pillars, the templates render the wrong thing forever.</p>
+  <p>Your first week is dedicated to one job: figure out who actually wins on social as a personal voice in the US wellness, health, and contemplative space, and figure out why. Everything else, every template you design, every pipeline decision you make, every starter post we write together, is built on what you learn this week.</p>
 
-  <p>Your first week is dedicated to one job: <strong>understand who actually wins on social as a personal voice in the US wellness, health, and contemplative space, and why.</strong> Everything else (templates, pipeline, scheduler, content) is built on top of what you find.</p>
+  <p>This is not a content calendar. It's not a marketing brief. We are building the long-term founder authority that will eventually carry every brand AVO launches, starting with Pheeew and continuing for years. That's a serious thing to build, and serious things deserve evidence underneath them, not instinct.</p>
 
   <div class="callout">
-    <span class="label">Principle</span>
-    <p>Authentic alignment with Alex is necessary but not sufficient. Categories must also map to what people actually want to follow over years, not what feels right in a brainstorm.</p>
+    <p>The principle to keep in mind throughout: <strong>authentic alignment with me is necessary but not sufficient.</strong> The categories we land on need to map to what real people actually want to follow over years, not what feels right in a brainstorm.</p>
     <span class="ko-line">알렉스와의 진정성 있는 정렬은 필수이지만 그것만으로는 충분하지 않다. 카테고리는 사람들이 수년간 진심으로 팔로우하고 싶어하는 것에 부합해야 한다.</span>
   </div>
 </section>
@@ -526,79 +386,22 @@
   <span class="section-eyebrow">02 · Research Questions <span class="ko">다섯 가지 질문</span></span>
   <h2>Research Questions</h2>
 
-  <p class="intro">Five questions structure the research. Each one has sub-questions. By end of Week 1, you should have a 1 to 2 page write-up answering each, with sources cited.</p>
+  <p>There are five questions that need real answers by the end of the week. Each one feeds a specific decision later. Take each one seriously enough to write a short essay on it (one to two pages), with sources, not a paragraph.</p>
 
-  <div class="question-card">
-    <span class="q-num">Question 01</span>
-    <h3>Why do people follow personal accounts in 2026, and what makes them stay?</h3>
-    <div class="q-ko">2026년에 사람들은 왜 개인 계정을 팔로우하며, 무엇이 그들을 머물게 하는가</div>
-    <p class="sub">The psychology question. Without this, every other choice is guesswork.</p>
-    <ul>
-      <li>What emotional needs does following a personal account meet (validation, learning, community, escapism, aspiration, parasocial intimacy)</li>
-      <li>What's the difference between a follow-and-stay account vs a follow-and-unfollow-in-a-week account</li>
-      <li>How does parasocial relationship form, and what breaks it</li>
-      <li>What signals trust in 2026 (receipts, consistency, vulnerability, expertise, lifestyle, proximity)</li>
-      <li>What signals fakeness, and how does the audience detect it</li>
-    </ul>
-  </div>
+  <h3>Why do people follow personal accounts, and why do they stay?</h3>
+  <p>This is the psychological foundation. Without it, every other decision is guesswork. We need to know what emotional need a follow actually serves, whether that's validation, learning, community, escapism, aspiration, or parasocial intimacy. We need to understand the difference between an account someone follows and stays with for years and one they follow on impulse and unfollow within a week. How does the parasocial bond form, and what breaks it? What signals trust in 2026, and what signals fakeness, and how does the audience detect either one?</p>
 
-  <div class="question-card">
-    <span class="q-num">Question 02</span>
-    <h3>What categories of content drive long-term retention vs short-term engagement spikes?</h3>
-    <div class="q-ko">장기 유지율을 만드는 콘텐츠 카테고리 vs 단기 참여 폭발을 만드는 카테고리</div>
-    <p class="sub">A viral post and a loyal follower are not the same thing. We want followers who stay for years.</p>
-    <ul>
-      <li>Which content categories have the shortest half-life (trends, hot takes, quote cards, news reactions)</li>
-      <li>Which categories compound (education, frameworks, recurring rituals, longitudinal stories)</li>
-      <li>What's the optimal ratio of evergreen vs timely content for personal authority accounts</li>
-      <li>Are there content categories that drive engagement but actively harm credibility long-term</li>
-    </ul>
-  </div>
+  <h3>What kinds of content build long retention versus short engagement spikes?</h3>
+  <p>A viral post and a loyal follower are not the same thing, and we want followers who stay. So we need to know which categories have the shortest half-life (probably trends, hot takes, quote cards, news reactions) and which ones compound (probably education, frameworks, recurring rituals, longitudinal stories). What's the ratio of evergreen to timely content for accounts that grow steadily over years? And critically, are there content categories that drive engagement in the short term but actively erode credibility over time?</p>
 
-  <div class="question-card">
-    <span class="q-num">Question 03</span>
-    <h3>What does credibility look like in the US wellness and contemplative space specifically?</h3>
-    <div class="q-ko">미국 웰니스 및 명상/영성 영역에서 신뢰는 구체적으로 어떻게 만들어지는가</div>
-    <p class="sub">Credibility in this space is contested. The wellness industry has a credibility crisis, which is also our opportunity.</p>
-    <ul>
-      <li>Who are the most-trusted voices in US wellness right now, and how did they earn that trust</li>
-      <li>What are the credibility-destroying patterns in this space (selling courses, MLM ties, undisclosed ads, supplements with no evidence)</li>
-      <li>How do voices with religious or contemplative grounding land in 2026 US culture vs five years ago</li>
-      <li>Where does the line sit between credible-curious and crank, between earnestness and corny</li>
-      <li>How important is formal credentialing (MD, RD, PhD) vs lived practice authority</li>
-    </ul>
-  </div>
+  <h3>What does credibility look like in this specific space?</h3>
+  <p>The US wellness and contemplative space has a credibility crisis, which is part of why there's an opportunity here. We need to know who the most-trusted voices are right now, and how they earned that trust. We need to know the credibility-destroying patterns: selling courses, MLM ties, undisclosed sponsorships, supplements with no evidence behind them. We need to understand how voices with religious or contemplative grounding land in 2026 culture compared to five years ago. Where is the line between credible-curious and crank? Between earnest and corny? And how important is formal credentialing (MD, RD, PhD) versus the authority that comes from lived practice?</p>
 
-  <div class="question-card">
-    <span class="q-num">Question 04</span>
-    <h3>What carousel structure and visual patterns work best for personal voice in this space?</h3>
-    <div class="q-ko">개인 보이스를 살리는 카루셀 구조와 시각 패턴은 무엇인가</div>
-    <p class="sub">The form question. We are automating carousels specifically. This question affects every template you build.</p>
-    <ul>
-      <li>Cover slide patterns that earn the swipe vs ones people scroll past</li>
-      <li>Optimal slide count for retention (3, 5, 7, 10) and how it varies by content category</li>
-      <li>Image-to-text balance per slide (text-heavy vs photo-heavy vs hybrid)</li>
-      <li>Caption length patterns paired with carousels (short hook vs long-form essay caption)</li>
-      <li>End-card patterns: CTA, soft close, pattern-break, repeat the question</li>
-      <li>Hook patterns specific to personal accounts (vs influencer or brand accounts)</li>
-      <li>How important is face/personality showing in carousels vs all-text or all-photo</li>
-    </ul>
-  </div>
+  <h3>What carousel structure and visual patterns actually work for personal voice?</h3>
+  <p>This is the form question, and it shapes every template you build. We are automating carousels specifically, so the study has to be filtered through that lens. Cover slide patterns that earn the swipe versus ones people scroll past. Optimal slide count for retention (three, five, seven, ten) and how it varies by content type. Image-to-text balance per slide. Caption length and what role the caption plays relative to the carousel. End-card patterns that drive saves and shares. Hook patterns that work specifically for personal accounts as opposed to influencer or brand accounts. And one I want you to pay attention to: how important is showing face and personality in carousels, versus going all-text or all-photo.</p>
 
-  <div class="question-card">
-    <span class="q-num">Question 05</span>
-    <h3>Where is the underserved space Alex can occupy in US wellness culture?</h3>
-    <div class="q-ko">알렉스가 미국 웰니스 문화에서 차지할 수 있는 비어 있는 자리</div>
-    <p class="sub">The white-space question. We don't want to be voice number 847 in a saturated lane.</p>
-    <ul>
-      <li>What's overproduced in US wellness right now (saturation analysis)</li>
-      <li>What's underproduced (gap analysis)</li>
-      <li>What does Korean and East Asian wellness tradition uniquely offer that US audiences want but don't have a clear voice for</li>
-      <li>What does a Christian-curious or contemplative voice offer in a wellness space that has been heavily New Age and mystical</li>
-      <li>What does a CPG-builder perspective offer that pure wellness-influencer perspective doesn't</li>
-      <li>Which niches inside wellness are growing fastest in 2026 (microbiome, longevity, regenerative ag, raw milk, slow living, men's health)</li>
-    </ul>
-  </div>
+  <h3>Where is the underserved space we can occupy?</h3>
+  <p>This is the white-space question, and it might be the most important of the five. We don't want to be voice number 847 in a saturated lane. So we need to know what's overproduced right now (the saturation map), what's underproduced (the gap map), and where my actual life happens to overlap with one of those gaps. Korean and East Asian wellness tradition uniquely offers things US audiences want but don't have a clear voice for. A Christian-curious or contemplative voice is rare in a wellness space that's been heavily New Age and mystical. A CPG-builder perspective is different from a pure wellness-influencer perspective. Which of these openings is most defensible, and which one most authentically maps to who I already am?</p>
 </section>
 
 <!-- ============== SOURCES ============== -->
@@ -606,49 +409,26 @@
   <span class="section-eyebrow">03 · Sources & Methods <span class="ko">출처와 방법</span></span>
   <h2>Sources & Methods</h2>
 
-  <h3>Primary research methods</h3>
+  <p>Use four primary research methods this week, in roughly this order.</p>
 
-  <div class="grid-2">
-    <div class="mini-card">
-      <span class="meta">Method 01 · 계정 감사</span>
-      <h4>Account audit</h4>
-      <p>Pick 15 to 25 personal accounts in the wellness, health, food, contemplative space. For each: count their posts in last 90 days, categorize by content type, log engagement rate, log growth trajectory if available (Social Blade, ViewStats).</p>
-      <p class="study">Output: spreadsheet with category x engagement matrix.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Method 02 · 댓글 발굴</span>
-      <h4>Comment archaeology</h4>
-      <p>For top 5 reference accounts, read the comments on their highest-engagement carousels of the last 6 months. What are people actually saying. What needs are being met. What language are they using.</p>
-      <p class="study">Output: 1-page synthesis of audience emotional language patterns.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Method 03 · 포화도 지도</span>
-      <h4>Saturation map</h4>
-      <p>For each candidate category (food, verse, news, education, practice), sample 30+ accounts and assess saturation. Where is the same content being made by 50 people. Where is it being made by 5.</p>
-      <p class="study">Output: saturation heatmap by category.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Method 04 · 장문 종합</span>
-      <h4>Long-form synthesis</h4>
-      <p>Read 3 to 5 long-form pieces (Substack essays, podcast transcripts, books) on personal brand psychology, parasocial dynamics, or wellness culture. Distill principles, not tactics.</p>
-      <p class="study">Output: principles list with source citations.</p>
-    </div>
-  </div>
+  <h3>Account audit</h3>
+  <p>Pick somewhere between 15 and 25 personal accounts in the wellness, health, food, or contemplative space, including the deep-study and curated references in sections 5 and 6. For each account, log the post count over the last 90 days, categorize their content by type, note their engagement rate, and pull their growth trajectory if you can find it (Social Blade and ViewStats both work). The output is a spreadsheet that lets you see the relationship between content category and engagement at a glance.</p>
 
-  <h3>Secondary sources to consult</h3>
+  <h3>Comment archaeology</h3>
+  <p>For your top five reference accounts, read the comments on their highest-engagement carousels of the last six months. Don't skim. Read what people are actually saying. What needs are being met. What language they use. What gets replied to and what just sits there. The output is a one-page synthesis of how the audience actually talks, which becomes a guide for our caption voice and our reply patterns later.</p>
 
-  <ul>
-    <li><strong>Books:</strong> Show Your Work (Austin Kleon), Trust Me I'm Lying (Ryan Holiday), The Wellness Trap (Christy Harrison), Strangers Drowning (Larissa MacFarquhar) for moral-life voices, anything Wendell Berry on attention.</li>
-    <li><strong>Substacks and newsletters:</strong> Casey Means' newsletter, Maintenance Phase (podcast), Plain English (Derek Thompson), The Honest Broker (Ted Gioia) for cultural pattern reading.</li>
-    <li><strong>Studies and reports:</strong> Edelman Trust Barometer (annual), Pew Research on US religion and wellness, Reports from Future Market Insights and Mintel on wellness consumer trends 2024 to 2026.</li>
-    <li><strong>Platforms:</strong> Native IG and TikTok analytics on saved 2026 industry case studies. Look at Later, Sprout Social, and Hootsuite annual reports.</li>
-    <li><strong>Industry voices:</strong> Casey Lewis (After School newsletter), Jasmine Sun, Anu Atluru on building authority in public.</li>
-  </ul>
+  <h3>Saturation map</h3>
+  <p>For each candidate category we might consider (food, verse, news, education, practice, story, anything else), sample 30 or more accounts and assess saturation. Where is the same content being made by 50 people? Where is it being made by 5? The output is a heatmap showing crowded versus open lanes, which directly informs the differentiation question.</p>
+
+  <h3>Long-form synthesis</h3>
+  <p>Read three to five long-form pieces (Substack essays, podcast transcripts, books) on personal brand psychology, parasocial dynamics, or wellness culture. The reading list below is a starting point, not a prescription. Distill principles from them, not tactics. Tactics get outdated. Principles travel.</p>
+
+  <h3>Reading list</h3>
+  <p>For books, look at <em>Show Your Work</em> by Austin Kleon, <em>Trust Me, I'm Lying</em> by Ryan Holiday, <em>The Wellness Trap</em> by Christy Harrison, <em>Strangers Drowning</em> by Larissa MacFarquhar for moral-life voices, and anything Wendell Berry has written on attention. For newsletters and podcasts, the Casey Means newsletter, the Maintenance Phase podcast (especially for skeptical wellness audience patterns), Derek Thompson's Plain English, and Ted Gioia's The Honest Broker for cultural pattern reading. For data, the annual Edelman Trust Barometer, Pew Research on US religion and wellness, and Mintel reports on wellness consumer trends from 2024 to 2026. For voices on building authority in public, Casey Lewis (After School), Jasmine Sun, and Anu Atluru.</p>
 
   <div class="callout">
-    <span class="label">Caution</span>
-    <p>Marketing-blog content on "how to grow on Instagram" is largely garbage. Almost all of it is written for SEO and recycles the same generic advice. Bias your reading toward primary observation (real account audits, real comment data) and toward thinkers who have built audiences themselves.</p>
-    <span class="ko-line">"인스타그램 성장법" 같은 마케팅 블로그 글은 거의 다 SEO용 재탕이다. 1차 관찰(실제 계정 감사, 실제 댓글 데이터)과 본인이 청중을 직접 키워본 사람들의 글을 우선시해라.</span>
+    <p>One warning. Marketing-blog content on "how to grow on Instagram" is mostly garbage. Almost all of it is written for SEO and recycles the same generic advice. Bias your reading toward primary observation (the actual account audits and comment data you do yourself) and toward people who have built audiences themselves and can speak from that.</p>
+    <span class="ko-line">"인스타그램 성장법" 류 마케팅 블로그 글은 거의 다 SEO용 재탕이다. 1차 관찰과 본인이 청중을 직접 키워본 사람들의 글을 우선시해라.</span>
   </div>
 </section>
 
@@ -657,9 +437,9 @@
   <span class="section-eyebrow">04 · Carousel Study Method <span class="ko">카루셀 연구 방법</span></span>
   <h2>Carousel Study Method</h2>
 
-  <p class="intro">Many reference accounts post Reels, Stories, single images, and carousels. Our automation system is for <strong>carousels specifically</strong>. So your study must be filtered through a carousel lens. Even when an account uses Reels heavily, your job is to extract their <em class="ko">carousel</em> patterns.</p>
+  <p>Most reference accounts post a mix of carousels, Reels, Stories, and single images. Our automation system is for carousels specifically, so the study has to be filtered through a carousel lens. If an account leans heavily on Reels, don't skip them. Find their last 10 to 15 carousel posts and study those.</p>
 
-  <h3>Eight elements to extract from every carousel studied</h3>
+  <p>For every carousel you study, log eight things. The table below gives you the framework.</p>
 
   <table>
     <thead>
@@ -671,63 +451,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong>Cover slide</strong><br><em class="ko">표지 슬라이드</em></td>
-        <td>Hook type (question, statement, statistic, image-only, name-of-thing). Text size relative to canvas. Use of face vs object vs typography.</td>
-        <td>The cover decides if anyone swipes. Without the swipe, slides 2-10 don't exist.</td>
+        <td><strong>Cover slide</strong></td>
+        <td>Hook type (question, statement, statistic, image-only, name-of-thing). Text size relative to canvas. Whether they use face, object, or typography as the central element.</td>
+        <td>The cover decides if anyone swipes. Without the swipe, slides 2 through 10 don't exist.</td>
       </tr>
       <tr>
-        <td><strong>Slide count</strong><br><em class="ko">슬라이드 수</em></td>
-        <td>Total slide count per post. Average across the account. Variance by content type.</td>
-        <td>Different counts serve different content. 3-slide rhythm vs 7-slide essay vs 10-slide deep dive.</td>
+        <td><strong>Slide count</strong></td>
+        <td>Total slides per post. Average across the account. Variance by content type.</td>
+        <td>Different counts serve different content. A 3-slide rhythm reads differently from a 7-slide essay.</td>
       </tr>
       <tr>
-        <td><strong>Slide-to-slide rhythm</strong><br><em class="ko">슬라이드 간 리듬</em></td>
-        <td>Are slides repetitive in structure or each unique. Does the layout pulse (text → image → text → image).</td>
-        <td>Rhythm controls swipe-completion rate. A reader either commits at slide 2 or drops out.</td>
+        <td><strong>Slide rhythm</strong></td>
+        <td>Whether slides repeat in structure or each is unique. Whether the layout pulses (text then image then text then image).</td>
+        <td>Rhythm controls swipe-completion rate. The reader either commits at slide 2 or drops out.</td>
       </tr>
       <tr>
-        <td><strong>Text-image ratio</strong><br><em class="ko">텍스트와 이미지 비중</em></td>
-        <td>Per slide: text-dominant, image-dominant, or balanced. Average across the account.</td>
-        <td>Tells us what the audience reads vs scans. Affects template design.</td>
+        <td><strong>Text-image ratio</strong></td>
+        <td>Per slide and averaged: text-dominant, image-dominant, or balanced.</td>
+        <td>Tells us what the audience reads versus scans, which directly affects template design.</td>
       </tr>
       <tr>
-        <td><strong>Typography hierarchy</strong><br><em class="ko">서체 위계</em></td>
-        <td>How many type sizes per slide. Is there a clear primary, secondary, tertiary. Serif vs sans.</td>
+        <td><strong>Typography hierarchy</strong></td>
+        <td>How many type sizes per slide. Whether there's a clear primary, secondary, tertiary. Serif versus sans.</td>
         <td>Visual hierarchy is what makes a carousel readable while scrolling fast.</td>
       </tr>
       <tr>
-        <td><strong>End slide pattern</strong><br><em class="ko">마지막 슬라이드</em></td>
-        <td>CTA, soft close, question, repeat the cover, brand mark only, save reminder.</td>
-        <td>End slides drive saves, shares, follows. The pattern matters more than people realize.</td>
+        <td><strong>End slide pattern</strong></td>
+        <td>What the last slide does: CTA, soft close, repeat the question, brand mark only, save reminder.</td>
+        <td>End slides drive saves and shares. The pattern matters more than people realize.</td>
       </tr>
       <tr>
-        <td><strong>Caption pairing</strong><br><em class="ko">캡션 짝짓기</em></td>
-        <td>Caption length. Does it expand the carousel content or repeat it. Hook in the first line.</td>
-        <td>Caption is where the algorithm reads context. Affects discovery.</td>
+        <td><strong>Caption pairing</strong></td>
+        <td>Caption length. Whether the caption expands the carousel content or repeats it. Whether there's a hook in the first line.</td>
+        <td>The caption is where the algorithm reads context. Affects discovery.</td>
       </tr>
       <tr>
-        <td><strong>Engagement signal</strong><br><em class="ko">참여 신호</em></td>
-        <td>Compare carousel posts to Reels posts on the same account. Which gets more comments. Which gets more saves.</td>
-        <td>Saves matter most for retention-focused accounts. Carousels generally win on saves.</td>
+        <td><strong>Engagement signal</strong></td>
+        <td>Compare carousel posts to Reels posts on the same account. Which gets more comments, which gets more saves.</td>
+        <td>Saves are what matter most for retention-focused accounts. Carousels generally win on saves.</td>
       </tr>
     </tbody>
   </table>
 
-  <div class="callout">
-    <span class="label">Reels vs Carousel</span>
-    <p>If a reference account leans heavily on Reels, you can still extract carousel patterns from their less-frequent carousel posts. Don't skip an account because they're "Reels-first." Find their last 10-15 carousels and study those specifically.</p>
-    <span class="ko-line">참고 계정이 릴스 위주여도, 그들이 올린 카루셀 게시물 10-15개를 따로 모아서 분석해라. 카루셀 패턴은 카루셀에서만 추출된다.</span>
-  </div>
-
-  <h3>Output of carousel study (Week 1)</h3>
-
-  <ul>
-    <li>Spreadsheet of 30 to 50 specific carousel posts you studied (link, account, slide count, hook type, end pattern, observed engagement)</li>
-    <li>1-page synthesis: 5 to 7 carousel patterns that consistently work, with examples</li>
-    <li>1-page synthesis: 3 to 5 carousel patterns to avoid, with examples of why</li>
-    <li>Recommended cover slide vocabulary (hook types) to build into AVO templates</li>
-    <li>Recommended end slide vocabulary (close types) to build into AVO templates</li>
-  </ul>
+  <p>By the end of the week you should have a spreadsheet of 30 to 50 specific carousel posts you studied (with links, account, slide count, hook type, end pattern, observed engagement), a one-page synthesis listing the five to seven carousel patterns that consistently work with examples, a one-page synthesis of three to five patterns to avoid with examples of why, and recommended cover-slide and end-slide vocabulary that we'll build into the AVO templates in week two.</p>
 </section>
 
 <!-- ============== REFERENCES ============== -->
@@ -735,109 +501,53 @@
   <span class="section-eyebrow">05 · Reference Accounts <span class="ko">참고 계정</span></span>
   <h2>Reference Accounts</h2>
 
-  <p class="intro">These are accounts in adjacent or overlapping space that have built durable personal authority. Your job is not to copy their content, but to understand what specifically works about their carousel approach.</p>
+  <p>These are accounts in adjacent or overlapping space that have built durable personal authority. Your job is not to copy their content, but to understand what specifically works about their carousel approach. Five to study deeply, ten more to scan for pattern.</p>
 
-  <h3>Voices to study deeply (5)</h3>
+  <h3>Study deeply</h3>
 
-  <div class="ref-account">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle">@drcaseyskitchen · Casey Means MD</span>
       <span class="category">Wellness · Education · Founder</span>
     </div>
-    <p class="why">Built credibility through MD background plus a clear thesis (metabolic health), then became a founder (Levels). Educational tone, science-backed, not preachy.</p>
-    <p class="extract">Carousel extract: how she structures educational carousels (3 to 5 slide explainers). How she balances science citations with personal story. How she introduces brand without making the account a brand promo channel.</p>
+    <p>Casey Means built her credibility on an MD background plus a clear thesis (metabolic health), then translated it into a company (Levels). Her tone is educational, science-backed, and notably not preachy. Study how she structures three-to-five-slide explainer carousels, how she balances science citations with personal story, and how she introduces her brand without making the account a brand-promo channel. That last one is what we need most.</p>
   </div>
 
-  <div class="ref-account">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle">@johnmarkcomer · John Mark Comer</span>
       <span class="category">Spiritual · Contemplative</span>
     </div>
-    <p class="why">Christian voice on rest, attention, contemplation. Has built a real readership without being preachy or culture-war coded. Books (The Ruthless Elimination of Hurry, Practicing the Way) reach far beyond church audiences.</p>
-    <p class="extract">Carousel extract: how he handles religious content in carousels for a non-religious audience. Cover slide patterns. End slide tone (rarely a CTA, often a question).</p>
+    <p>A Christian voice on rest, attention, and contemplation who has built a real readership without being preachy or culture-war coded. His books (<em>The Ruthless Elimination of Hurry</em>, <em>Practicing the Way</em>) reach far beyond church audiences. Study how he handles religious content in a carousel format for a non-religious audience. Pay attention to his cover slides and his end-slide tone, which is rarely a CTA and usually a question.</p>
   </div>
 
-  <div class="ref-account">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle">@thekoreanvegan · Joanne Lee Molinaro</span>
       <span class="category">Food · Korean-American · Storytelling</span>
     </div>
-    <p class="why">Korean-American food account that built massive following through storytelling. Uses food as entry to family memory, identity, emotion. Carousels often function as photo-essays.</p>
-    <p class="extract">Carousel extract: how she uses Korean cultural context as differentiation rather than restriction. Photo-essay carousel structure. Caption pairing.</p>
+    <p>A Korean-American food account that built a massive following through storytelling, not through recipes. Food is her entry point into family memory, identity, and emotion. Her carousels often function as photo-essays. Study how she uses Korean cultural context as differentiation rather than restriction, and study her photo-essay structure and how she pairs caption with carousel.</p>
   </div>
 
-  <div class="ref-account">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle">@ryanholiday · Ryan Holiday</span>
       <span class="category">Stoicism · Books · Daily Practice</span>
     </div>
-    <p class="why">Built durable authority on Stoic philosophy through daily emails (Daily Stoic) and consistent voice. Has been able to translate authority into successful book sales over a decade.</p>
-    <p class="extract">Carousel extract: how daily ritual content creates audience habit. Quote-plus-context carousel format. How he uses 3-slide micro-essay structure.</p>
+    <p>Holiday built durable authority on Stoic philosophy through daily emails (Daily Stoic) and consistent voice over a decade. He's been able to translate the authority into successful book sales repeatedly. Study how daily ritual content creates audience habit, how the quote-plus-context format works long-term without becoming Pinterest, and his three-slide micro-essay structure.</p>
   </div>
 
-  <div class="ref-account">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle">@hubermanlab · Andrew Huberman</span>
       <span class="category">Science · Wellness · Authority</span>
     </div>
-    <p class="why">Scientist-led wellness account. Educational, citation-heavy. Tone is calm, deliberate. Carousels are dense with information, paired with citation slides.</p>
-    <p class="extract">Carousel extract: citation discipline. Long-form information carousel structure (7 to 10 slides). How calm tone differs from influencer urgency.</p>
+    <p>Scientist-led wellness account. Educational, citation-heavy, with a calm and deliberate tone. His carousels are dense with information and often paired with citation slides. Study his citation discipline, his long-form information carousel structure (typically 7 to 10 slides), and how a scientist-voice differs from an influencer-voice in pace and language.</p>
   </div>
 
-  <h3>Voices to scan for patterns (10)</h3>
+  <h3>Scan for pattern</h3>
 
-  <div class="grid-2">
-    <div class="mini-card">
-      <span class="meta">Founder · Story</span>
-      <h4>@whitney · Whitney Wolfe Herd</h4>
-      <p>How a founder builds public persona alongside brand. Mostly understated, strategic.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Wellness · Practice</span>
-      <h4>@richroll · Rich Roll</h4>
-      <p>Long-term consistency. Practitioner first, podcast amplifier second.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Wellness · Critique</span>
-      <h4>Maintenance Phase (podcast)</h4>
-      <p>Skeptical wellness audience. Understand what they reject and why.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Food · Practice</span>
-      <h4>@samin_nosrat · Samin Nosrat</h4>
-      <p>Sensory food writing translated to social. Joyful, generous tone.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Spiritual · Modern</span>
-      <h4>@kristatippett · Krista Tippett</h4>
-      <p>On Being. Contemplative tone in mainstream cultural conversation.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Tradlife · Aesthetic</span>
-      <h4>@balladofthebee · Brooke Bell</h4>
-      <p>Slow living, homestead, traditional food. Aesthetic-driven, US South.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Microbiome · Science</span>
-      <h4>@tim.spector · Tim Spector</h4>
-      <p>UK microbiome scientist. Science-as-content done well. Founder of Zoe.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Korean · Practice</span>
-      <h4>@maangchi · Maangchi</h4>
-      <p>Korean food authority. Decade-plus consistency. Personal warmth.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Long-form · Editorial</span>
-      <h4>@iamtylerstaton · Tyler Staton</h4>
-      <p>Pastor with reach beyond church. Tone, restraint, contemplative content.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Daily ritual</span>
-      <h4>@dailystoic · Daily Stoic</h4>
-      <p>Quote-plus-context format at scale. What works, what feels mechanical.</p>
-    </div>
-  </div>
+  <p>Ten more accounts worth a look but not requiring deep study: <strong>@whitney</strong> (Whitney Wolfe Herd, founder building public persona alongside brand, mostly understated), <strong>@richroll</strong> (long-term consistency, practitioner first, podcast amplifier second), the <strong>Maintenance Phase</strong> podcast (skeptical wellness audience, understand what they reject and why), <strong>@samin_nosrat</strong> (sensory food writing translated to social, joyful generous tone), <strong>@kristatippett</strong> (On Being, contemplative tone in mainstream cultural conversation), <strong>@balladofthebee</strong> (slow living, homestead, traditional food, US South aesthetic), <strong>@tim.spector</strong> (UK microbiome scientist, Zoe founder, science-as-content done well), <strong>@maangchi</strong> (Korean food authority, decade-plus consistency, personal warmth), <strong>@iamtylerstaton</strong> (pastor with reach beyond church, restraint, contemplative content), and <strong>@dailystoic</strong> (quote-plus-context format at scale, useful for understanding what works and what feels mechanical).</p>
 </section>
 
 <!-- ============== ALEX-CURATED REFERENCES ============== -->
@@ -845,79 +555,59 @@
   <span class="section-eyebrow">06 · Curated References <span class="ko">알렉스 큐레이트</span></span>
   <h2>Curated References</h2>
 
-  <p class="intro">These accounts were personally curated by Alex. Treat them as <strong>required study</strong>. Open each one, scroll through their last 90 days, and extract carousel patterns specifically. Add them to your account audit spreadsheet.</p>
+  <p>The accounts below are ones I've personally curated. Treat them as required study, on equal footing with the deep-study list above. For each one, capture five of their best-performing carousels, run them through the eight-element framework from section 4, and write me a paragraph on what you think AVO can adopt from them or should avoid.</p>
 
-  <div class="callout">
-    <span class="label">How to study these</span>
-    <p>For each account: (1) screenshot or save the 5 best-performing carousels you can find, (2) log the 8 elements from Section 04 (cover, slide count, rhythm, text-image ratio, typography, end pattern, caption, engagement), (3) write one paragraph on what AVO can adopt or avoid based on this account.</p>
-    <span class="ko-line">각 계정마다: (1) 가장 성과 좋은 카루셀 5개 캡처, (2) 04번 섹션의 8개 요소 기록, (3) AVO가 이 계정에서 무엇을 채택할지 또는 피할지 한 단락 작성.</span>
-  </div>
-
-  <div class="ref-account alex-pick">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle"><a href="https://www.instagram.com/mydrinkcreation" target="_blank">@mydrinkcreation</a></span>
       <span class="category">Beverage · Visual · Recipe-style</span>
     </div>
-    <p class="why">Drink/beverage creation account. Visually-driven recipe carousels. Adjacent to AVO's wellness-drink space (Pheeew puree).</p>
-    <p class="extract">Carousel extract: how recipe carousels are structured for visual appeal. Photography style. Ingredient slide vs process slide vs final shot. Caption-to-carousel pairing.</p>
-    <p class="ko-note">웰니스 음료 카루셀 시각화의 좋은 레퍼런스. Pheeew 출시 시에도 응용 가능.</p>
+    <p>A drink and beverage creation account, visually-driven, recipe-carousel format. Adjacent to where Pheeew will eventually live. Worth studying for how recipe carousels are structured for visual appeal, the photography style, the rhythm of ingredient slides versus process slides versus final shot, and how the caption pairs with the carousel content.</p>
   </div>
 
-  <div class="ref-account alex-pick">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle"><a href="https://www.instagram.com/wellnessofficer" target="_blank">@wellnessofficer</a></span>
       <span class="category">Wellness · Authority · Personal</span>
     </div>
-    <p class="why">Wellness account with an authoritative positioning. Study how the "officer" framing creates credibility cue.</p>
-    <p class="extract">Carousel extract: tone of authority without expertise theater. Cover slide patterns. How they handle wellness claims without making outcome promises.</p>
-    <p class="ko-note">권위 있는 톤을 어떻게 구축하는지 분석. 알렉스가 어떻게 신뢰를 만들지 참고.</p>
+    <p>A wellness account with an authoritative positioning. The "officer" framing is doing work as a credibility signal. Worth studying for tone: how do they project authority without slipping into expertise theater? Look at the cover slides and how they handle wellness claims without making outcome promises.</p>
   </div>
 
-  <div class="ref-account alex-pick">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle"><a href="https://www.instagram.com/bantrwomen" target="_blank">@bantrwomen</a></span>
       <span class="category">Community · Women · Conversation</span>
     </div>
-    <p class="why">Women-focused community account. Study the conversational, community-building voice. Different from authority-driven content.</p>
-    <p class="extract">Carousel extract: how community-feel is conveyed visually. Use of quotes from members. Open-ended question structures. Community-call carousel patterns.</p>
-    <p class="ko-note">커뮤니티 톤은 권위 톤과 다르다. 두 톤 사이 어디에 AVO가 위치할지 결정 도움.</p>
+    <p>A women-focused community account. The voice is conversational and community-building rather than authority-driven, which is a different posture from most of the deep-study refs. Study how community-feel is conveyed visually, how member quotes are used, what open-ended question structures look like, and how the community-call carousel format reads.</p>
   </div>
 
-  <div class="ref-account alex-pick">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle"><a href="https://www.instagram.com/hif.community" target="_blank">@hif.community</a></span>
       <span class="category">Community · Movement</span>
     </div>
-    <p class="why">Community-driven account. Study how a community account differs from a personal account in carousel structure.</p>
-    <p class="extract">Carousel extract: community-driven content patterns. How members are featured. Editorial vs UGC ratio. Frequency and rhythm.</p>
-    <p class="ko-note">커뮤니티 계정의 카루셀 구조 분석. AVO는 개인 계정이지만 커뮤니티 감각 일부 차용 가능.</p>
+    <p>Another community-driven account. Study how a community account differs structurally from a personal account in its carousels: how members are featured, the editorial-versus-UGC ratio, how often they post, and the rhythm of a community feed. We're not building a community account, but we may want to borrow some of the community feel selectively.</p>
   </div>
 
-  <div class="ref-account alex-pick">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle"><a href="https://www.instagram.com/ruidigital" target="_blank">@ruidigital</a></span>
       <span class="category">Design · Digital · Editorial</span>
     </div>
-    <p class="why">Digital/design account. Study for design and typography patterns that translate to carousel format.</p>
-    <p class="extract">Carousel extract: typography hierarchy. Layout discipline. Editorial spacing. How design-led accounts handle text-heavy carousels.</p>
-    <p class="ko-note">디자인 측면에서 강한 레퍼런스. Theo가 템플릿 디자인할 때 직접 참고.</p>
+    <p>A design and digital account. Worth studying for the design and typography patterns that translate to carousel format. Typography hierarchy, layout discipline, editorial spacing, and how design-led accounts handle text-heavy carousels without making them feel airless. This one will be most useful to you directly when you sit down to design templates.</p>
   </div>
 
-  <div class="ref-account alex-pick">
-    <div class="ref-meta">
+  <div class="ref">
+    <div class="ref-head">
       <span class="handle"><a href="https://www.instagram.com/behind_the_lenssse" target="_blank">@behind_the_lenssse</a></span>
       <span class="category">Photography · Lifestyle · Behind-the-scenes</span>
     </div>
-    <p class="why">Behind-the-lens photography account. Study how photography-led accounts use carousels to build narrative arc.</p>
-    <p class="extract">Carousel extract: photo-essay structure. Sequencing of images for emotional pull. Minimal text, maximum image. How AVO can use photo-only carousels selectively.</p>
-    <p class="ko-note">사진 위주 카루셀의 서사 구조. AVO 콘텐츠에 photo-essay 카테고리를 추가할지 검토.</p>
+    <p>A behind-the-lens photography account. Study how photography-led accounts use carousels to build narrative arc: photo-essay structure, image sequencing for emotional pull, minimal text and maximum image. This may suggest adding a photo-essay category to the AVO mix. Worth investigating.</p>
   </div>
 
-  <div class="post-callout">
-    <span class="post-label">Specific carousel to study</span>
-    <p>Alex flagged this specific post as a visual pattern reference. Open it, study it, and extract the carousel mechanics in detail.</p>
+  <div class="post-link">
+    <p><strong>One specific post.</strong> I want you to also study this single carousel in detail, slide by slide. Open it, capture every slide, and run it through the eight-element framework.</p>
     <p><a href="https://www.instagram.com/p/DXF6CTsFOST/" target="_blank">https://www.instagram.com/p/DXF6CTsFOST/</a></p>
-    <p style="color: var(--mute);">알렉스가 직접 골라준 한 게시물. 이 카루셀의 모든 슬라이드를 캡처하고 위 8가지 요소 기준으로 분석할 것.</p>
   </div>
 </section>
 
@@ -926,56 +616,54 @@
   <span class="section-eyebrow">07 · Anti-References <span class="ko">피해야 할 패턴</span></span>
   <h2>Anti-References</h2>
 
-  <p class="intro">Equally important. Pick 5 to 7 accounts that represent the failure modes we want to design against.</p>
+  <p>Equally important. Pick five to seven accounts that represent failure modes we want to design against. The table below outlines the patterns. Study them privately and document what specifically went wrong: when the credibility eroded, what content category caused it, and how the audience reacted.</p>
 
   <table>
     <thead>
       <tr>
         <th>Failure mode</th>
         <th>What it looks like</th>
-        <th>Why we avoid</th>
+        <th>Why we avoid it</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Wellness influencer · promo</strong><br><em class="ko">웰니스 인플루언서 홍보</em></td>
+        <td><strong>Wellness influencer promo</strong></td>
         <td>Constant supplement promo, MLM ties, course launches, undisclosed sponsorships</td>
         <td>Erodes credibility instantly. Audience trust dies on the first noticed ad.</td>
       </tr>
       <tr>
-        <td><strong>Quote-card aesthetic</strong><br><em class="ko">명언 카드형</em></td>
+        <td><strong>Quote-card aesthetic</strong></td>
         <td>Verses or quotes alone, no personal context, polished graphics with no voice</td>
-        <td>Pinterest-grade content. Indistinguishable from 50,000 other accounts. No follow reason.</td>
+        <td>Pinterest-grade. Indistinguishable from 50,000 other accounts. Nothing to follow for.</td>
       </tr>
       <tr>
-        <td><strong>Hustle · outcome promises</strong><br><em class="ko">결과 약속형</em></td>
+        <td><strong>Hustle and outcome promises</strong></td>
         <td>"Lose 20 lbs in 30 days," "Manifest your ideal life," "5 things that changed everything"</td>
-        <td>Outcome-promise content has shortest credibility half-life of any format.</td>
+        <td>Outcome-promise content has the shortest credibility half-life of any format.</td>
       </tr>
       <tr>
-        <td><strong>Crank · pseudoscience</strong><br><em class="ko">유사과학</em></td>
-        <td>Anti-vaccine messaging, citing discredited studies, raw water claims, fluoride conspiracies</td>
+        <td><strong>Crank and pseudoscience</strong></td>
+        <td>Anti-vaccine messaging, citing discredited studies, raw water, fluoride conspiracies</td>
         <td>Burns serious-audience credibility for a niche audience that tips into harm.</td>
       </tr>
       <tr>
-        <td><strong>AI-generated visible</strong><br><em class="ko">AI 생성 티 나는</em></td>
+        <td><strong>AI-generated visible</strong></td>
         <td>Obviously AI imagery, AI-written captions, generic stock-feeling content</td>
-        <td>Sophistication of audience in 2026 detects this immediately. Death signal.</td>
+        <td>The 2026 audience detects this immediately. It reads as low-effort, even if it isn't.</td>
       </tr>
       <tr>
-        <td><strong>Founder-content sloppiness</strong><br><em class="ko">파운더 자랑형</em></td>
-        <td>"Here's how I closed my round" content. Founder humblebrag.</td>
-        <td>Wrong audience. Wrong vibe for AVO. Founder-content audiences and wellness audiences don't overlap.</td>
+        <td><strong>Founder-content sloppiness</strong></td>
+        <td>"Here's how I closed my round." Founder humblebrag. Money talk.</td>
+        <td>Wrong audience for AVO. Founder-content audiences and wellness audiences don't overlap.</td>
       </tr>
       <tr>
-        <td><strong>Trend-chasing</strong><br><em class="ko">트렌드 쫓기</em></td>
+        <td><strong>Trend-chasing</strong></td>
         <td>Every viral audio, every meme format, every passing trend</td>
-        <td>Builds an audience that follows for novelty, not voice. Audience evaporates with the trend.</td>
+        <td>Builds an audience that follows for novelty, not voice. The audience leaves with the trend.</td>
       </tr>
     </tbody>
   </table>
-
-  <p>For your synthesis, pick 5 specific anti-reference accounts (don't list them in the deliverable, but study them privately) and document what specifically went wrong: when did the credibility erode, what content category caused it, what was the audience reaction.</p>
 </section>
 
 <!-- ============== CULTURE ============== -->
@@ -983,66 +671,36 @@
   <span class="section-eyebrow">08 · Cultural Context <span class="ko">문화적 맥락</span></span>
   <h2>Cultural Context</h2>
 
-  <p class="intro">You need to understand the cultural moment Alex is entering. This is not background reading. It directly determines which voice will land and which will feel dated within 6 months.</p>
+  <p>You need to understand the cultural moment we're entering. This isn't background reading. It directly determines which voice will land and which will feel dated within six months. Below is a quick map of where US wellness culture sits as of 2026, broken into rising trends, saturated lanes, and underserved spaces.</p>
 
-  <h3>What's happening in US wellness culture (2026)</h3>
+  <h3>Rising</h3>
 
-  <div class="grid-2">
-    <div class="mini-card">
-      <span class="meta">Trend · Rising</span>
-      <h4>Microbiome mainstream</h4>
-      <p>Gut health has fully crossed into mainstream. Tim Spector's Zoe, Seed DS-01, Pendulum. Audience is becoming more sophisticated about prebiotics vs probiotics vs postbiotics.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Trend · Rising</span>
-      <h4>Longevity / "Don't Die"</h4>
-      <p>Bryan Johnson normalized hyper-quantified longevity. Peter Attia's Outlive as gateway. Audience for protocol content is large and growing.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Trend · Rising</span>
-      <h4>Tradlife / regenerative</h4>
-      <p>Homesteading aesthetic, raw milk debate, regenerative ag, real food traditions. Crosses political lines.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Trend · Rising</span>
-      <h4>Christian / contemplative renaissance</h4>
-      <p>"Vibe shift" toward seriousness. Increased interest in liturgy, Stoicism, contemplative practice. Substack writers, podcasts, books all leaning in.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Trend · Saturated</span>
-      <h4>Cold plunge / breathwork bro</h4>
-      <p>Wim Hof aesthetic at peak saturation. Men's health and testosterone optimization is crowded.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Trend · Saturated</span>
-      <h4>"That Girl" wellness aesthetic</h4>
-      <p>Pilates, matcha, slow morning routine content. Heavily produced, minimal differentiation.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Trend · Critique</span>
-      <h4>Wellness skepticism</h4>
-      <p>Maintenance Phase audience. Christy Harrison. The Atlantic Health. Audience is growing for wellness content that critiques wellness culture itself.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Underserved · 빈자리</span>
-      <h4>Asian wellness for US audience</h4>
-      <p>Korean food and traditional practice has Maangchi, but not many doing TCM, Korean herbalism, Ayurveda for US audience with intellectual rigor and personal voice.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Underserved · 빈자리</span>
-      <h4>Builder + practitioner</h4>
-      <p>Most wellness voices are practitioners only. Most founders are too busy to be content creators. The founder-who-builds-clean-CPG-and-actually-lives-the-practice voice is open.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Underserved · 빈자리</span>
-      <h4>Spiritual-curious without dogma</h4>
-      <p>Most spiritual content is either hard-religious or hard-New-Age. The thoughtful, faith-curious, intellectually honest middle is open.</p>
-    </div>
-  </div>
+  <p>Microbiome health has fully crossed into the mainstream. Tim Spector's Zoe, Seed DS-01, and Pendulum have all trained the audience to be more sophisticated about prebiotics versus probiotics versus postbiotics. Gut health is no longer a niche topic; it's baseline literacy.</p>
+
+  <p>Longevity, sometimes branded as "Don't Die," has been normalized by Bryan Johnson and the gateway provided by Peter Attia's <em>Outlive</em>. The audience for protocol-driven content is large and growing.</p>
+
+  <p>Tradlife and regenerative culture is rising on a different axis: homesteading aesthetic, the raw milk debate, regenerative agriculture, real food traditions. This crosses political lines in interesting ways and is one of the more dynamic spaces in wellness right now.</p>
+
+  <p>There's a Christian and contemplative renaissance happening in parallel. Call it a vibe shift toward seriousness. Increased interest in liturgy, in Stoicism, in contemplative practice. Substack writers, podcasts, and books are all leaning in. This is real and growing, not a fad.</p>
+
+  <h3>Saturated</h3>
+
+  <p>Cold plunge and breathwork content has hit peak saturation. The Wim Hof aesthetic is everywhere, and men's health and testosterone optimization is one of the most crowded spaces in all of wellness right now. Hard to differentiate, easy to look like a hundred other guys.</p>
+
+  <p>The "That Girl" wellness aesthetic (Pilates, matcha, slow morning routine content) is heavily produced and commercially saturated. Everything is on-brand, nothing is differentiated.</p>
+
+  <p>Wellness skepticism is its own crowded category now. Maintenance Phase, Christy Harrison, and The Atlantic Health represent a real audience hungry for content that critiques wellness culture from the inside, but the lane is filling fast.</p>
+
+  <h3>Underserved</h3>
+
+  <p>Asian wellness traditions for a US audience is open. Maangchi covers Korean food beautifully, but there's almost no one bringing TCM, Korean herbalism, or Ayurveda to a US audience with both intellectual rigor and a personal voice. This is one of the clearest openings.</p>
+
+  <p>The builder-and-practitioner combination is also open. Most wellness voices are practitioners only. Most founders are too busy or too commercially-coded to be effective content creators. The voice of someone who is actually building clean CPG and actually living the practice is rare. That's me.</p>
+
+  <p>Spiritual-curious without dogma is open. Most spiritual content sits at one of two poles: hard-religious or hard-New-Age. The thoughtful, faith-curious, intellectually honest middle is mostly empty, and that's a place I could occupy honestly.</p>
 
   <div class="callout">
-    <span class="label">Strategic question</span>
-    <p>Where do Alex's actual life and the underserved spaces overlap? That overlap is the strategic position. Find it through research, not through guessing.</p>
+    <p>The strategic question for you to answer in the synthesis: where does my actual life overlap with the underserved spaces? That overlap is the position. Find it through research, not through guessing.</p>
     <span class="ko-line">알렉스의 실제 삶과 비어 있는 자리가 겹치는 지점이 우리의 전략적 위치다. 추측이 아니라 리서치로 찾자.</span>
   </div>
 </section>
@@ -1052,29 +710,23 @@
   <span class="section-eyebrow">09 · Synthesis Framework <span class="ko">종합 프레임워크</span></span>
   <h2>Synthesis Framework</h2>
 
-  <p class="intro">By Friday of Week 1, you should have findings. By Monday of Week 2, you should have a synthesis that translates findings into actionable recommendations.</p>
+  <p>By Friday you should have findings. By the following Monday you should have a synthesis that translates findings into recommendations I can act on. The synthesis needs to answer six questions, in this order.</p>
 
-  <h3>The synthesis output should answer six questions</h3>
+  <p><strong>Position.</strong> Where in the US wellness and contemplative space does AVO sit, given the saturation map and given who I actually am? This is the most important answer of the six because everything else flows from it.</p>
 
-  <ol>
-    <li><strong>Position · 포지션:</strong> Where in the US wellness and contemplative space does Alex sit, given the saturation map and his actual life</li>
-    <li><strong>Pillars · 기둥:</strong> What 3 to 5 content pillars best serve that position, with evidence from research that each pillar has audience demand and is not fully saturated</li>
-    <li><strong>Voice · 보이스:</strong> What 5 to 7 voice principles (do's and don'ts) emerged from study of reference and anti-reference accounts</li>
-    <li><strong>Carousel format · 카루셀 형식:</strong> What carousel structure (cover slide patterns, body slide rhythm, slide count, end card) consistently outperforms in this space</li>
-    <li><strong>Cadence · 빈도:</strong> What posting frequency produces sustained growth without burnout, based on observed patterns of long-term reference accounts</li>
-    <li><strong>Differentiation · 차별점:</strong> What 2 to 3 things will be uniquely AVO that nothing else in the space currently does</li>
-  </ol>
+  <p><strong>Pillars.</strong> What three to five content pillars best serve that position? For each pillar, you need evidence from the research that the pillar has audience demand and is not fully saturated. No pillar makes the cut on instinct alone.</p>
 
-  <h3>Decision framework when research findings conflict</h3>
+  <p><strong>Voice.</strong> What five to seven voice principles emerged from your study of the reference and anti-reference accounts? Frame them as do's and don'ts and tie each one back to a specific observation.</p>
 
-  <p>You will encounter conflicts. One reference account does X, another does the opposite. Use this hierarchy:</p>
+  <p><strong>Carousel format.</strong> What carousel structure consistently outperforms in this space? Cover slide patterns, body slide rhythm, optimal slide count, end card. This becomes the spec for the templates you build in week two.</p>
 
-  <ol>
-    <li><strong>Long-term retention &gt; short-term engagement.</strong> If a tactic drives a viral spike but accounts that use it churn audience faster, reject it.</li>
-    <li><strong>Credibility-building &gt; growth-hacking.</strong> If a tactic grows numbers but erodes trust, reject it.</li>
-    <li><strong>Sustainable for Alex &gt; theoretically optimal.</strong> If a recommendation requires Alex to be someone he isn't (extroverted, religious-traditionalist, science-PhD), reject it. The system has to be runnable.</li>
-    <li><strong>Underserved &gt; proven.</strong> If two paths both work, the less crowded one builds more durable distinct authority.</li>
-  </ol>
+  <p><strong>Cadence.</strong> What posting frequency produces sustained growth without burnout, based on the long-term reference accounts you observed? Daily is too much. Weekly might be too little. Find the actual right answer.</p>
+
+  <p><strong>Differentiation.</strong> What two to three things will be uniquely AVO that nothing else in the space currently does? This is the answer that should make me say "I wouldn't have thought of that."</p>
+
+  <h3>When findings conflict</h3>
+
+  <p>You'll hit conflicts. One reference does X, another does the opposite. When that happens, use this hierarchy in order: long-term retention beats short-term engagement, credibility-building beats growth-hacking, sustainable for me beats theoretically optimal, and underserved beats proven. If a tactic drives a viral spike but the accounts that use it churn audience faster, reject it. If a tactic grows numbers but erodes trust, reject it. If a recommendation requires me to be someone I'm not (extroverted, religious-traditionalist, science-credentialed), reject it. And if two paths both work, the less crowded one builds more durable distinct authority.</p>
 </section>
 
 <!-- ============== DELIVERABLE ============== -->
@@ -1082,28 +734,13 @@
   <span class="section-eyebrow">10 · Deliverable <span class="ko">결과물</span></span>
   <h2>Deliverable</h2>
 
-  <p class="intro">A single document, 5 to 8 pages. Format up to you (PDF, slide deck, Notion page). Must contain the following sections.</p>
+  <p>One document, somewhere between five and eight pages. Format is up to you (PDF, slide deck, Notion page, whatever lets you communicate clearest). It needs to contain the following: a one-paragraph methodology summary, your one-to-two-paragraph answer to each of the five research questions with citations, the saturation map as a visual, an audit table of 15 to 25 accounts (including all six curated references), your carousel pattern findings (five to seven that work, three to five to avoid, with examples from real posts), your anti-pattern list with evidence, your recommended position with reasoning, your three to five recommended pillars with research backing, your five to seven recommended voice principles with examples, your carousel format and cadence specification, and your two to three differentiators.</p>
 
-  <ol>
-    <li><strong>Research methodology summary</strong> · 1 paragraph on what you studied and how</li>
-    <li><strong>5 question answers</strong> · 1 to 2 paragraphs each, with citations</li>
-    <li><strong>Saturation map</strong> · Visual showing which categories are crowded vs underserved</li>
-    <li><strong>Reference account audit</strong> · Table of 15 to 25 accounts (including all 6 Alex-curated picks) with category, engagement pattern, key extract</li>
-    <li><strong>Carousel pattern findings</strong> · 5 to 7 patterns that work, 3 to 5 patterns to avoid, with examples from real posts</li>
-    <li><strong>Anti-pattern list</strong> · 5 to 7 specific failure modes with evidence</li>
-    <li><strong>Recommended position</strong> · Where AVO sits in the landscape, with reasoning</li>
-    <li><strong>Recommended pillars</strong> · 3 to 5 pillars, with research backing for each</li>
-    <li><strong>Recommended voice principles</strong> · 5 to 7 do's and don'ts, with examples from references</li>
-    <li><strong>Recommended carousel format and cadence</strong> · Specific structural recommendations (slide count ranges, cover hook vocabulary, end slide vocabulary)</li>
-    <li><strong>2 to 3 differentiators</strong> · What makes AVO uniquely AVO</li>
-  </ol>
-
-  <p>Bring this to a 1-hour review session with Alex. We discuss, agree on direction, and template design begins the following Monday.</p>
+  <p>Bring it to a one-hour review session with me. We'll discuss, agree on direction, and you'll start template design the following Monday.</p>
 
   <div class="callout">
-    <span class="label">What this is not</span>
-    <p>Not a marketing-blog summary. Not a list of "10 wellness influencers to watch." Not a generic content calendar. This is original research-driven strategy that should make Alex go "I would not have thought of that."</p>
-    <span class="ko-line">마케팅 블로그 요약이 아니다. 일반적인 콘텐츠 캘린더가 아니다. 알렉스가 "이건 나 혼자선 떠올리지 못했겠다" 라고 말할 수 있는 리서치 기반 전략이어야 한다.</span>
+    <p>What this is not: a marketing-blog summary, a list of "10 wellness influencers to watch," or a generic content calendar. It's original research-driven strategy. The bar is that I read it and think "I would not have arrived at this on my own."</p>
+    <span class="ko-line">마케팅 블로그 요약이 아니다. 일반적인 콘텐츠 캘린더가 아니다. 알렉스가 "이건 나 혼자선 떠올리지 못했겠다"고 말할 수 있는 리서치 기반 전략이어야 한다.</span>
   </div>
 </section>
 
@@ -1112,26 +749,34 @@
   <span class="section-eyebrow">11 · Timeline <span class="ko">일정</span></span>
   <h2>Timeline</h2>
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="week">Week 1 · Apr 27 – May 3</span>
+  <p>Four weeks total. Research first, build second.</p>
+
+  <div class="timeline-row">
+    <div class="week">Week 1 · Apr 27 to May 3</div>
+    <div>
       <h4>Research and synthesis</h4>
-      <p>Audit accounts. Read sources. Answer the 5 questions. Synthesize findings. Deliver strategy doc by end of week. Review session at start of weekend.</p>
+      <p>Audit accounts. Read sources. Answer the five questions. Synthesize into recommendations. Deliver the strategy document by end of week. Review session early in the following weekend.</p>
     </div>
-    <div class="timeline-item">
-      <span class="week">Week 2 · May 5 – 10</span>
-      <h4>Templates locked, content pipeline started</h4>
-      <p>Design 7 master templates based on research-validated pillars and carousel patterns. Start input system (Sheet/Notion). Render flow prototype.</p>
+  </div>
+  <div class="timeline-row">
+    <div class="week">Week 2 · May 5 to 10</div>
+    <div>
+      <h4>Templates locked, pipeline started</h4>
+      <p>Design the master templates based on what the research validated. Start the input system, whether that's a Sheet or Notion. Get the render flow prototyped.</p>
     </div>
-    <div class="timeline-item">
-      <span class="week">Week 3 · May 11 – 17</span>
+  </div>
+  <div class="timeline-row">
+    <div class="week">Week 3 · May 11 to 17</div>
+    <div>
       <h4>Pipeline complete, scheduler connected, first batch rendered</h4>
-      <p>Render flow finalized. Scheduler hooked up. 30 starter posts written, photo-paired, rendered, queued.</p>
+      <p>Render flow finalized. Scheduler hooked up. Around 30 starter posts written, photo-paired, rendered, and queued.</p>
     </div>
-    <div class="timeline-item">
-      <span class="week">Week 4 · May 18 – 25</span>
+  </div>
+  <div class="timeline-row">
+    <div class="week">Week 4 · May 18 to 25</div>
+    <div>
       <h4>Handoff</h4>
-      <p>Documentation. 1-hour walkthrough with Alex and Dawon. Final source files. Recorded screen-share. Final 5-row sample of new-post creation flow.</p>
+      <p>Documentation Alex can read in 30 minutes. One-hour walkthrough with me and Dawon. Final source files, fonts, and brand kit organized. A recorded screen-share showing the new-post flow end to end.</p>
     </div>
   </div>
 </section>
@@ -1143,99 +788,33 @@
   <span class="section-eyebrow">12 · Constraints <span class="ko">절대 원칙</span></span>
   <h2>Constraints</h2>
 
-  <p class="intro">Some things are fixed regardless of what the research says. These are who Alex is, not what the audience wants. The first one below overrides everything.</p>
+  <p>Some things are fixed regardless of what the research finds. These are about who I am, not about what the audience wants. The first one below overrides everything else in this document.</p>
 
   <div class="callout-strong">
     <span class="label">The First Rule</span>
     <h4>AVO is not a guru.</h4>
-    <p>Alex does not know more than he knows. We do not teach. We do not claim expertise we have not earned. We do not overstate findings, we do not promise outcomes, we do not position as authority where there is none.</p>
-    <p>We are a practitioner sharing the path, not the summit. A student in public, not a teacher in disguise. A reader, an eater, a builder paying attention, not a coach handing out frameworks.</p>
-    <p>If a post would make a real expert in the field cringe, kill it. If a sentence claims more than the source supports, rewrite it. If a caption would feel uncomfortable to read aloud to someone with actual credentials in this domain, it does not get posted.</p>
+    <p>I do not know more than I know. We do not teach. We do not claim expertise we have not earned. We do not overstate findings, we do not promise outcomes, and we do not position as authority where there is none.</p>
+    <p>What we are instead: a practitioner sharing the path, not the summit. A student in public, not a teacher in disguise. A reader, an eater, a builder paying attention, not a coach handing out frameworks.</p>
+    <p>The test for any post: would a real expert in the field cringe reading this? If yes, kill it. If a sentence claims more than the source supports, rewrite it. If a caption would feel uncomfortable to read aloud to someone with actual credentials in the domain, it doesn't get posted.</p>
     <div class="ko-block">
       <strong style="color: var(--ink);">제1원칙 · AVO는 구루가 아니다.</strong><br>
-      알렉스는 자신이 아는 것 이상을 안다고 말하지 않는다. 우리는 가르치지 않는다. 얻지 않은 권위를 주장하지 않는다. 발견을 과장하지 않는다. 결과를 약속하지 않는다. 권위가 없는 곳에서 권위자처럼 행동하지 않는다.<br><br>
-      우리는 정상이 아닌 길 위의 실천자다. 가르치는 사람이 아닌 공개된 학생이다. 코치가 아닌, 주의를 기울이는 사람이다.<br><br>
-      이 원칙을 통과하지 못하는 글은 올리지 않는다.
+      알렉스는 자신이 아는 것 이상을 안다고 말하지 않는다. 우리는 가르치지 않는다. 얻지 않은 권위를 주장하지 않는다. 발견을 과장하지 않는다. 결과를 약속하지 않는다. 권위가 없는 곳에서 권위자처럼 행동하지 않는다. 우리는 정상이 아닌 길 위의 실천자다. 가르치는 사람이 아닌 공개된 학생이다. 코치가 아닌, 주의를 기울이는 사람이다. 이 원칙을 통과하지 못하는 글은 올리지 않는다.
     </div>
   </div>
 
-  <h3>Voice constraints</h3>
+  <h3>Voice</h3>
+  <p>No em-dashes. They've become an AI-content tell, and breaking the habit forces tighter sentences. Use commas, colons, and periods instead. No New Age vocabulary: "manifest," "vibrate higher," "high-vibe," anything in that family is rejected regardless of audience preference. No outcome promises. "Lose X by Y," "Cure your gut in 30 days," "Achieve mental clarity" content is banned even if research shows it works. And no teaching posture. We share what we observe. We don't teach. "Here's how to do X" gets reframed as "Here's what I tried and what happened."</p>
 
-  <div class="grid-2">
-    <div class="mini-card">
-      <span class="meta">Voice</span>
-      <h4>No em-dashes</h4>
-      <p>Use commas, colons, periods. House style.</p>
-      <p class="ko-note">엠대시 금지. 쉼표, 콜론, 마침표 사용.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Voice</span>
-      <h4>No "manifest" or "vibrate higher" language</h4>
-      <p>Hard reject regardless of audience preference. New Age vocabulary is banned.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Voice</span>
-      <h4>No outcome promises</h4>
-      <p>"Lose X by Y," "Cure your gut in 30 days," "Achieve mental clarity" content is banned regardless of what the research shows works.</p>
-      <p class="ko-note">결과 약속 금지.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Voice</span>
-      <h4>No teaching posture</h4>
-      <p>We share what we observe. We don't teach. "Here's how to do X" gets reframed as "Here's what I tried and what happened."</p>
-      <p class="ko-note">가르침의 자세 금지. 관찰을 공유한다.</p>
-    </div>
-  </div>
+  <h3>Authority</h3>
+  <p>No overclaiming. We don't speak with more certainty than the evidence warrants. "Studies show" requires the actual study link. "It's well known" is banned phrasing. No expertise theater. We never imply credentials I don't have, never frame personal opinion as professional consensus, and never adopt a doctor or nutritionist or scientist tone outside of cited research. Authority is borrowed, not invented. When citing research, name the researcher. When sharing a protocol, name the source. When quoting wisdom, name the speaker. And cite sources always: any claim, any study, any statistic gets attribution. If we can't cite it, we don't post it.</p>
 
-  <h3>Authority constraints</h3>
-
-  <div class="grid-2">
-    <div class="mini-card">
-      <span class="meta">Authority</span>
-      <h4>No overclaiming</h4>
-      <p>Don't speak with more certainty than the evidence warrants. "Studies show" requires the actual study link. "It's well known" is banned.</p>
-      <p class="ko-note">과장 금지. 확실성은 근거만큼만 표현.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Authority</span>
-      <h4>No expertise theater</h4>
-      <p>Never imply credentials Alex doesn't have. Never frame personal opinion as professional consensus. Never adopt a doctor / nutritionist / scientist tone when speaking outside of cited research.</p>
-      <p class="ko-note">전문가 흉내 금지. 자격이 없는 분야에서 자격이 있는 척하지 않는다.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Authority</span>
-      <h4>Borrow authority, don't claim it</h4>
-      <p>When citing research, name the researcher. When sharing a protocol, name the source. When quoting wisdom, name the speaker. Authority is reflected, not invented.</p>
-      <p class="ko-note">권위는 차용한다, 만들어내지 않는다.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Authority</span>
-      <h4>Always cite sources</h4>
-      <p>Any claim, study, statistic, or framework gets attribution. Non-negotiable. If we can't cite it, we don't post it.</p>
-      <p class="ko-note">항상 출처 표기.</p>
-    </div>
-  </div>
-
-  <h3>Identity constraints</h3>
-
-  <div class="grid-2">
-    <div class="mini-card">
-      <span class="meta">Identity</span>
-      <h4>Public language: LA + US</h4>
-      <p>Never "Silver Lake," never "East-side." Internal-only references.</p>
-    </div>
-    <div class="mini-card">
-      <span class="meta">Identity</span>
-      <h4>Practitioner posture</h4>
-      <p>Even if guru-content gets more engagement, we don't do it. Practitioner-in-public is the only acceptable posture.</p>
-      <p class="ko-note">실천자의 자세만 허용.</p>
-    </div>
-  </div>
+  <h3>Identity</h3>
+  <p>Public language uses LA and US, not internal references. "Silver Lake," "East-side," and any other neighborhood-specific name stays internal-only. Practitioner posture, always. Even if guru-content gets more engagement (and it might), we don't do it. There's only one acceptable posture in this account, and it's the one of a person paying attention in public.</p>
 </section>
 
 <footer class="doc-footer">
   <p>All Vital Organics · Internal Working Document</p>
-  <p>Version 3.0 · April 27, 2026 · Author: Alex Kim · 김승준</p>
+  <p>Version 4.0 · April 27, 2026 · Author: Alex Kim · 김승준</p>
 </footer>
 
 </main>
